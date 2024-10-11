@@ -1,0 +1,32 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white">
+    <h1 class="text-4xl font-bold mb-6">Online Timer</h1>
+    <div class="text-6xl font-mono mb-6">
+      {{ formattedTime }}
+    </div>
+  
+    <div class="space-x-4">
+      <button 
+        class="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded"
+        (click)="startTimer()"
+        [disabled]="isRunning"
+      >
+        Start
+      </button>
+      
+      <button 
+        class="px-4 py-2 bg-yellow-500 hover:bg-yellow-700 rounded"
+        (click)="pauseTimer()"
+        [disabled]="!isRunning"
+      >
+        Pause
+      </button>
+      
+      <button 
+        class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded"
+        (click)="resetTimer()"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+  
